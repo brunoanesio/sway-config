@@ -1,0 +1,213 @@
+* {
+  border: none;
+  font-family: Iosevka Mayukai Codepro;
+  font-size: 18.5px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: #1e1e2e;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#workspaces,
+#mode,
+#custom-media,
+#custom-fans,
+#clock,
+#idle_inhibitor,
+#language,
+#pulseaudio,
+#backlight,
+#battery,
+#network,
+#custom-power,
+#mpd,
+#custom-logo,
+#custom-dunst,
+#custom-network,
+#custom-kernel,
+#custom-uptime,
+#custom-memory,
+#custom-weather,
+#temperature,
+#window,
+#cpu,
+#memory,
+#disk,
+#tray {
+  background-color: #313244;
+  padding: 0 12px;
+  margin: 4px 4px 4px 4px;
+  border-radius: 90px;
+  background-clip: padding-box;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  min-width: 20px;
+  color: #cdd6fe;
+}
+
+#custom-network {
+  color: #f38ba8;
+}
+
+#custom-dunst {
+  color: #cba6f7;
+}
+
+#custom-dunst.enabled {
+  color: #cba6f7;
+}
+
+#custom-dunst.dnd {
+  background-color: #cba6f7;
+  color: #000000;
+}
+
+#workspaces button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+  color: #89b4fa;
+}
+
+#disk {
+  color: #56b6c2;
+}
+
+#workspaces button.urgent {
+  color: #f38ba8;
+}
+
+#cpu {
+  color: #94e2d5;
+}
+
+#custom-memory {
+  color: #cba6f7;
+}
+
+#memory {
+  color: #cba6f7;
+}
+
+#temperature {
+  color: #cba6f7;
+}
+
+#temperature.critical {
+  background-color: #f38ba8;
+  color: #313244;
+}
+
+#custom-media {
+  background-color: #cba6f7;
+  color: #313244;
+}
+
+#custom-fans {
+  color: #f38ba8;
+}
+
+#clock {
+  color: #89b4fa;
+}
+
+#custom-weather {
+  color: #56b6c2;
+}
+
+#mode {
+  color: #f38ba8;
+}
+
+#window {
+  color: #9ece6a;
+}
+
+#custom-power {
+  color: #f25287;
+}
+
+#idle_inhibitor {
+  color: #abb2bf;
+}
+
+#idle_inhibitor.activated {
+  background-color: #abb2bf;
+  color: #313244;
+}
+
+#language {
+  color: #56b6c2;
+}
+
+#custom-uptime {
+  color: #9ece6a;
+}
+
+#pulseaudio {
+  color: #b4befe;
+}
+
+#custom-logo {
+  color: #89b4fa;
+  background-color: #252734;
+}
+
+#pulseaudio.muted {
+  background-color: #f38ba8;
+  color: #313244;
+}
+
+#backlight {
+  color: #89b4fa;
+}
+
+#custom-kernel {
+  color: #89b4fa;
+}
+
+#battery {
+  color: #a6e3a1;
+}
+
+#battery.charging,
+#battery.plugged {
+  background-color: #a6e3a1;
+  color: #313244;
+}
+
+@keyframes blink {
+  to {
+    background-color: #313244;
+    color: #f38ba8;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f38ba8;
+  color: #313244;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#network {
+  color: #cba6f7;
+}
+
+#network.disconnected {
+  background-color: #f38ba8;
+  color: #313244;
+}
