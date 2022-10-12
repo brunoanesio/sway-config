@@ -17,3 +17,7 @@ sudo pacman -S sway swaybg xdg-desktop-portal xdg-desktop-portal-wlr grim wl-cli
 ```bash
 paru -S rofi-lbonn-wayland-git clipman
 ```
+
+## Credits
+
+[roidm](https://github.com/roidm) - Original waybar config.
