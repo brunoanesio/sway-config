@@ -64,6 +64,9 @@ input * {
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Print screen
+    bindsym Print exec flameshot gui
+
     # Lock screen
     bindsym $mod+Alt+L exec swaylock -i ~/Imagens/Wallpapers/catppuccin-wallpapers/waves/cat-waves.png
 
@@ -213,8 +216,8 @@ for_window {
 #
 # Assigns
 assign {
-    [app_id="firefox"] 2
-    [app_id="spotify"] 6
+    [class="firefox"] 2
+    [class="Spotify"] 6
     [app_id="chatterino"] 7
 }
 #
