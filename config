@@ -18,12 +18,13 @@ set $menu rofi -show drun -modi drun,run,window
 ### Output configuration
 #
 # Wallpaper
-output * bg ~/Imagens/Wallpapers/catppuccin-wallpapers/waves/Waves Dark 6016x6016.jpg fill
+output * bg ~/Imagens/Wallpapers/catppuccin-wallpapers/waves/cat-waves.png fill
 #
 # Borders
 default_border pixel 2
-default_floating_border pixel 4
+default_floating_border pixel 1
 hide_edge_borders none
+smart_gaps off
 #
 # Gaps
 gaps {
@@ -62,6 +63,9 @@ input * {
 
     # Start your launcher
     bindsym $mod+d exec $menu
+
+    # Lock screen
+    bindsym $mod+Alt+L exec swaylock -i ~/Imagens/Wallpapers/catppuccin-wallpapers/waves/cat-waves.png
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -210,8 +214,6 @@ for_window {
 # Assigns
 assign {
     [app_id="firefox"] 2
-    [app_id="keepassxc"] 3
-    [app_id="corectrl"] 4
     [app_id="spotify"] 6
     [app_id="chatterino"] 7
 }
