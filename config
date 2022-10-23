@@ -18,7 +18,7 @@ set $menu rofi -show drun -modi drun,run,window
 ### Output configuration
 #
 # Wallpaper
-output * bg ~/Imagens/catppuccin-wallpapers/waves/Waves Dark 6016x6016.jpg fill
+output * bg ~/Imagens/Wallpapers/catppuccin-wallpapers/waves/Waves Dark 6016x6016.jpg fill
 #
 # Borders
 default_border pixel 2
@@ -32,7 +32,7 @@ gaps {
 }
 #
 # Font
-font pango:Iosevka Mayukai Codepro 14
+font pango:Iosevka Mayukai Original 14
 #
 # Border colors
 # class                 border  backgr. text    indicator child_border
@@ -220,8 +220,6 @@ include /etc/sway/config.d/*
 
 # Autostart
 exec --no-startup-id wl-paste -t text --watch clipman store --no-persist
-exec --no-startup-id corectrl
-exec --no-startup-id keepassxc
-exec --no-startup-id /usr/bin/emacs --daemon
 exec_always --no-startup-id bash $HOME/.config/sway/waybar.sh
+exec --no-startup-id bash $HOME/.config/sway/autostart.sh
 #
